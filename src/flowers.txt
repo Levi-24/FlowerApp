@@ -1,0 +1,10 @@
+rózsa;1000;piros;rózsa.jfif
+tulipán;800;sárga;tulipán.jfif
+orgona;1200;lila;orgona.jfif
+napraforgó;600;sárga;napraforgó.jfif
+mákvirág;500;piros;mákvirág.jfif
+ibolya;400;kék;ibolya.jfif
+hóvirág;700;fehér;hóvirág.jfif
+liliom;900;fehér;liliom.jfif
+kamilla;300;sárga;kamilla.jfif
+pünkösdi rózsa;1100;rózsaszín;pünkösdi_rózsa.jfif
