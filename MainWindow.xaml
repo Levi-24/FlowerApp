@@ -5,26 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlowerApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" Background="#FFBFBFBF">
-    
-    <Grid>
-        <ListBox x:Name="lbxFlower" Margin="40,120,595,120" SelectionChanged="lbxFlower_SelectionChanged" Background="White"/>
-        <ListBox x:Name="lbxCopy" Margin="595,120,40,120"/>
-        
-        <Button x:Name="btnCopy" Content="Copy" HorizontalAlignment="Left" Margin="215,352,0,0" VerticalAlignment="Top" Click="Copy" Background="#FFF2FF04" Height="45" Width="70"/>
-        <Button x:Name="btnDel" Content="Delete" HorizontalAlignment="Left" Margin="515,352,0,0" VerticalAlignment="Top" Background="Red" Click="Delete" Height="45" Width="70"/>
-        
-        <TextBox x:Name="txbName" HorizontalAlignment="Center" Margin="0,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txbPrice" HorizontalAlignment="Center" Margin="0,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="20"/>
-        <TextBox x:Name="txbColor" HorizontalAlignment="Center" Margin="0,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        
-        <Label Content="Name:" HorizontalAlignment="Left" Margin="343,94,0,0" VerticalAlignment="Top"/>
-        <Label Content="Price:" HorizontalAlignment="Left" Margin="343,163,0,0" VerticalAlignment="Top"/>
-        <Label Content="Color" HorizontalAlignment="Left" Margin="343,230,0,0" VerticalAlignment="Top"/>
-        <Label Content="Original List:" HorizontalAlignment="Left" Margin="40,94,0,0" VerticalAlignment="Top"/>
-        <Label Content="Copy List:" HorizontalAlignment="Left" Margin="595,94,0,0" VerticalAlignment="Top"/>
-        <Label Content="Image:" HorizontalAlignment="Left" Margin="343,288,0,0" VerticalAlignment="Top"/>
+        Title="MainWindow" Height="500" Width="800" MinHeight="500" MinWidth="800" Background="#FFBFBFBF">
 
-        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="345,314,0,0" VerticalAlignment="Top" Width="112"/>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="140*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox x:Name="lbxFlower" SelectionChanged="lbxFlower_SelectionChanged" Background="White" Grid.Row="2" Grid.RowSpan="7" FontSize="16"/>
+        <ListBox x:Name="lbxCopy" Grid.Column="4" Grid.Row="2" Grid.RowSpan="7" FontSize="16"/>
+
+        <Button x:Name="btnCopy" Content="Copy" Click="Copy" Background="#FFF2FF04" Grid.Column="1" Grid.Row="8" FontWeight="Bold" FontSize="16" Margin="5,30,5,30"/>
+        <Button x:Name="btnDel" Content="Delete" Background="Red" Click="Delete" Grid.Column="3" Grid.Row="8" FontWeight="Bold" FontSize="16" Margin="5,30,5,30"/>
+
+        <TextBox x:Name="txbName" VerticalContentAlignment="Center" TextWrapping="Wrap" Grid.Column="2" Grid.Row="2"/>
+        <TextBox x:Name="txbPrice" VerticalContentAlignment="Center" TextWrapping="Wrap" Grid.Column="2" Grid.Row="4"/>
+        <TextBox x:Name="txbColor" VerticalContentAlignment="Center" TextWrapping="Wrap" Grid.Column="2" Grid.Row="6"/>
+
+        <Label Content="Flowers" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="5" FontSize="36" FontWeight="Bold" />
+        <Label Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Price:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Grid.Row="3" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Color" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Grid.Row="5" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Original List:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Copy List:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4" Grid.Row="1" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Image:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Grid.Row="7" FontSize="16" FontWeight="Bold"/>
+
+        <Image x:Name="image" Grid.Column="2" Grid.Row="8"/>
+
     </Grid>
 </Window>
